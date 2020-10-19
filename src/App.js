@@ -84,7 +84,7 @@ const App = () => {
 		}
 		//fetchData();
 	}, []);*/
-	/*
+
 	useEffect(() => {
 		setSex(filter['sex']);
 		setAgeFrom(filter['age']['from']);
@@ -252,8 +252,8 @@ const App = () => {
 				})()}
 			</FormLayout>
 		</ModalCard>
-	</ModalRoot>);*/
-	return <h1>bbbbbb</h1>;
+	</ModalRoot>);
+	return <h1>ccccc</h1>;
 	/*return (
 		<View activePanel={activePanel} popout={popout} modal={modal}>
 			<Home id='home' fetchedUser={fetchedUser}
