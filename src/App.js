@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
-//import bridge from '@vkontakte/vk-bridge';
-//import View from '@vkontakte/vkui/dist/components/View/View';
-//import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
+import bridge from '@vkontakte/vk-bridge';
+import View from '@vkontakte/vkui/dist/components/View/View';
+import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
 
-//import Home from './panels/Home';
-//import axios from 'axios';
-//import getFriends, {backend_url} from "./panels/utils";
-//import {platform, IOS, ANDROID, ModalCard, FormLayout, ModalRoot, ModalPage} from '@vkontakte/vkui';
-//import Icon24Done from '@vkontakte/icons/dist/24/done';
-//import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
-//import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
-//import ModalPageHeader from "@vkontakte/vkui/dist/components/ModalPageHeader/ModalPageHeader";
-//import Select from "@vkontakte/vkui/dist/components/Select/Select";
-//import RangeSlider from "@vkontakte/vkui/dist/components/RangeSlider/RangeSlider";
-//import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
-//import Switch from "@vkontakte/vkui/dist/components/Switch/Switch";
-//import Checkbox from "@vkontakte/vkui/dist/components/Checkbox/Checkbox";
-//
-//const osName = platform();
-//const IS_PLATFORM_IOS = osName === IOS;
-//const IS_PLATFORM_ANDROID = osName === ANDROID;
+import Home from './panels/Home';
+import axios from 'axios';
+import getFriends, {backend_url} from "./panels/utils";
+import {platform, IOS, ANDROID, ModalCard, FormLayout, ModalRoot, ModalPage} from '@vkontakte/vkui';
+import Icon24Done from '@vkontakte/icons/dist/24/done';
+import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
+import Icon24Cancel from '@vkontakte/icons/dist/24/cancel';
+import ModalPageHeader from "@vkontakte/vkui/dist/components/ModalPageHeader/ModalPageHeader";
+import Select from "@vkontakte/vkui/dist/components/Select/Select";
+import RangeSlider from "@vkontakte/vkui/dist/components/RangeSlider/RangeSlider";
+import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
+import Switch from "@vkontakte/vkui/dist/components/Switch/Switch";
+import Checkbox from "@vkontakte/vkui/dist/components/Checkbox/Checkbox";
 
-/*
+const osName = platform();
+const IS_PLATFORM_IOS = osName === IOS;
+const IS_PLATFORM_ANDROID = osName === ANDROID;
+
+
 function getParameterByName(name, url) {
 	if (!url) url = window.location.href;
 	name = name.replace(/[\[\]]/g, '\\$&');
@@ -31,31 +31,31 @@ function getParameterByName(name, url) {
 	if (!results) return null;
 	if (!results[2]) return '';
 	return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}*/
+}
 
-//var _ = require('lodash');
+var _ = require('lodash');
 
 const App = () => {
-	//const [activePanel, setActivePanel] = useState('home');
-	//const [fetchedUser, setUser] = useState(null);
-	//const [accessToken, setAccessToken] = useState('');
-	////const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
-	//const [friends, setFriends] = useState([]);
-	//const [optionsList, setOptionsList] = useState([]);
-	//const [updateFriends, setUpdateFriends] = useState(0);
-	//const [filter, setFilter] = useState({'sex': 'a', 'age': {'from': 1, 'to': 100}, 'only_match': false});
-	//const [hash, setHash] = useState('');
-	//const [activeModal, setActiveModal] = useState(null);
-//
-	//const [sex, setSex] = useState(filter['sex']);
-	//const [ageFrom, setAgeFrom] = useState(filter['age']['from']);
-	//const [ageTo, setAgeTo] = useState(filter['age']['to']);
-	//const [onlyMatch, setOnlyMatch] = useState(filter['only_match']);
-	//const [vkFriends, setVkFriends] = useState([]);
-	//const [upd, setUpd] = useState(0);
-	//const [currentUserIndex, setCurrentUserIndex] = useState(0);
+	const [activePanel, setActivePanel] = useState('home');
+	const [fetchedUser, setUser] = useState(null);
+	const [accessToken, setAccessToken] = useState('');
+	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
+	const [friends, setFriends] = useState([]);
+	const [optionsList, setOptionsList] = useState([]);
+	const [updateFriends, setUpdateFriends] = useState(0);
+	const [filter, setFilter] = useState({'sex': 'a', 'age': {'from': 1, 'to': 100}, 'only_match': false});
+	const [hash, setHash] = useState('');
+	const [activeModal, setActiveModal] = useState(null);
 
+	const [sex, setSex] = useState(filter['sex']);
+	const [ageFrom, setAgeFrom] = useState(filter['age']['from']);
+	const [ageTo, setAgeTo] = useState(filter['age']['to']);
+	const [onlyMatch, setOnlyMatch] = useState(filter['only_match']);
+	const [vkFriends, setVkFriends] = useState([]);
+	const [upd, setUpd] = useState(0);
+	const [currentUserIndex, setCurrentUserIndex] = useState(0);
 
+	/*
 	useEffect(() => {
 		bridge.subscribe(({ detail: { type, data }}) => {
 			if (type === 'VKWebAppUpdateConfig') {
@@ -83,7 +83,7 @@ const App = () => {
 
 		}
 		//fetchData();
-	}, []);
+	}, []);*/
 	/*
 	useEffect(() => {
 		setSex(filter['sex']);
@@ -253,9 +253,9 @@ const App = () => {
 			</FormLayout>
 		</ModalCard>
 	</ModalRoot>);*/
-	return <h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>;
+	return <h1>bbbbbb</h1>;
 	/*return (
-		<View activePanel={activePanel}  modal={modal}>
+		<View activePanel={activePanel} popout={popout} modal={modal}>
 			<Home id='home' fetchedUser={fetchedUser}
 				    hash={hash}  optionsList={optionsList} setActiveModal={setActiveModal} friends={friends} setUpd={setUpd} openModalCard={openModalCard} setFilter={setFilter} filter={filter}  />
 			</View>
